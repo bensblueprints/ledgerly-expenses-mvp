@@ -1,0 +1,15 @@
+services:
+  ledgerly:
+    build: .
+    ports:
+      - "5335:5335"
+    environment:
+      - PORT=5335
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
+      - DATA_DIR=/data
+    volumes:
+      - ledgerly-data:/data
+    restart: unless-stopped
+
+volumes:
+  ledgerly-data:

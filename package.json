@@ -1,0 +1,68 @@
+{
+  "name": "ledgerly",
+  "version": "1.0.0",
+  "description": "Business expense tracking with local receipt OCR. Pay once, own it forever — no per-user subscription.",
+  "author": "Ben (bensblueprints)",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "postinstall": "node scripts/setup-native.js && node scripts/fetch-ocr-data.js",
+    "desktop": "electron .",
+    "test": "node test/smoke.js",
+    "dist": "electron-builder --win nsis"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "cookie-parser": "^1.4.7",
+    "date-fns": "^4.4.0",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "pdf-lib": "^1.17.1",
+    "tesseract.js": "7.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "electron": "^33.4.0",
+    "electron-builder": "^25.1.8",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.474.0",
+    "pureimage": "^0.4.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.9.2",
+    "tailwindcss": "^4.1.0",
+    "tesseract.js-core": "7.0.0",
+    "vite": "^6.3.5"
+  },
+  "build": {
+    "appId": "com.bensblueprints.ledgerly",
+    "productName": "Ledgerly",
+    "files": [
+      "electron/**",
+      "server/**",
+      "dist/**",
+      "vendor/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.finance"
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}
