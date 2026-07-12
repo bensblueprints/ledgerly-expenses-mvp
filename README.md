@@ -12,7 +12,7 @@ Business expense tracking with **local receipt OCR** — everything Expensify ch
 
 Don't want to touch a terminal? Grab the packaged installer (Windows desktop app + guided VPS deploy) here:
 
-**→ [https://whop.com/onetime-suite](https://whop.com/onetime-suite)** — one-time purchase, lifetime updates.
+**→ [https://whop.com/benjisaiempire/ledgerly-app](https://whop.com/benjisaiempire/ledgerly-app)** — one-time purchase, lifetime updates.
 
 ## Features
 
