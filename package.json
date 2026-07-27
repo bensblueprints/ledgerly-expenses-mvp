@@ -1,6 +1,6 @@
 {
   "name": "ledgerly",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Business expense tracking with local receipt OCR. Pay once, own it forever — no per-user subscription.",
   "author": "Ben (bensblueprints)",
   "license": "MIT",
